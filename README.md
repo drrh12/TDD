@@ -1,5 +1,6 @@
-# TDD
+# TDD (Test Driven Development)
 
+Understanding the fundamentals. Unit testing, test textures and parameterized tests.
 
 For the first and second lab you will need to have npm installed.
 https://www.npmjs.com/
