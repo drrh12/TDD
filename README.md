@@ -1,6 +1,5 @@
 # TDD
 
-# First Lab
 
 For the first and second lab you will need to have npm installed.
 https://www.npmjs.com/
