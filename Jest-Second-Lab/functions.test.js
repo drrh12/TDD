@@ -1,44 +1,21 @@
-const { functions, parameterized } = require("./functions");
+const { vectors } = require("./functions");
 
-test("Checking mathematic operations", () => {
-  expect(functions.arithmetic(2, 2, 2)).toBe(6);
+test("Comparing the equivalance of two vectors", () => {
+  expect(vectors.comparison()).toEqual([4, 5, 8]);
 });
 
-test("User should be Flavio Andrade object", () => {
-  expect(functions.createUser()).toEqual({
-    firstName: "Flavio",
-    lastName: "Andrade",
-  });
+test("Addition of vectors", () => {
+  expect(vectors.addition(2, 1, 5)).toStrictEqual([3, 4, 7]);
 });
 
-test.each([
-  [1, 1, 2],
-  [-1, 2, 1],
-  [2, 1, 3],
-])("%i + %i equals %i", (a, b, expected) => {
-  expect(parameterized.add(a, b)).toBe(expected);
+test("Subtraction of vectors", () => {
+  expect(vectors.subtraction(2, 4, 1)).toStrictEqual([1, 1, -1]);
 });
 
-test.each([
-  [1, 1, 0],
-  [-1, 2, -3],
-  [2, 2, 0],
-])("%i - %i equals %i", (a, b, expected) => {
-  expect(parameterized.sub(a, b)).toBe(expected);
+test("Scalar product of vectors", () => {
+  expect(vectors.scalarProduct([1, 2, 3], [1, 0, 1])).toStrictEqual(4);
 });
 
-test.each([
-  [1, 1, 1],
-  [-1, 2, -2],
-  [2, 2, 4],
-])("%i * %i equals %i", (a, b, expected) => {
-  expect(parameterized.mul(a, b)).toBe(expected);
-});
-
-test.each([
-  [1, 1, 1],
-  [-1, 2, -0.5],
-  [2, 2, 1],
-])("%i / %i equals %i", (a, b, expected) => {
-  expect(parameterized.div(a, b)).toBe(expected);
+test("Length of vectors", () => {
+  expect(vectors.length([1, 2, 3])).toStrictEqual(3);
 });

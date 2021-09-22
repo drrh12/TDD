@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "doc": "jsdoc -c jsdoc.json"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^27.1.1"
+    "jest": "^27.1.1",
+    "jsdoc": "^3.6.7"
   },
   "dependencies": {
     "mathjs": "^9.4.4"
